@@ -1,0 +1,126 @@
+@define-color highlight rgba(117, 241, 250, 1);
+@define-color dark-9 rgba(24, 24, 27, 1);
+@define-color dark-8 rgba(39, 39, 42, 1);
+@define-color dark-7 rgba(63, 63, 70, 1);
+@define-color dark-6 rgba(82, 82, 91, 1);
+@define-color dark-5 rgba(113, 113, 122, 1);
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: Inter;
+  font-size: 14px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.modules-center {
+  background: @dark-8;
+  padding: 6px 0px;
+  border-radius: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+window#waybar {
+  background: transparent;
+  border-radius: 28px;
+}
+
+#workspaces {
+  background: transparent;
+  padding: 0;
+  margin: 0 10px 0 10px;
+  border: none;
+  box-shadow: none;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  margin: 0px 2px;
+  border-radius: 15px;
+  color: transparent;
+  background: @dark-7;
+  transition: all 0.3s ease-in-out;
+  min-width: 1px;
+}
+
+#workspaces button:hover {
+  background: @dark-6;
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+  border-radius: 7px;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  min-width: 10px;
+}
+
+#workspaces button.active {
+  background: #74d7fc;
+  color: @dark-8;
+  min-width: 30px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  background-color: rgba(227, 81, 73, 1);
+}
+
+#clock {
+  color: #74d7fc;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#pulseaudio {
+  color: #ffd000;
+}
+
+#network {
+  color: #ee82ee;
+}
+
+#battery,
+#custom-battery {
+  color: #38ff1a;
+}
+
+#custom-notification {
+  color: #FFC107;
+}
+
+#custom-music-button {
+  font-family: Inter;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+#media {
+  color: #38ff1a;
+}
+
+#clock,
+#window,
+#pulseaudio,
+#network,
+#battery,
+#custom-notification,
+#custom-power,
+#custom-battery,
+#media {
+  margin: 0px 5px;
+  padding: 0 15px 0 15px;
+  background: @dark-8;
+  border-radius: 15px;
+  font-weight: bold;
+  font-family: Inter;
+}
+
+#custom-power {
+  color: #ffffff;
+  padding: 0 15px 0 12px;
+}

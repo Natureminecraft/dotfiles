@@ -1,0 +1,122 @@
+{
+  "layer": "top",
+  "margin-top": 15,
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-bottom": 10,
+  "modules-left": [
+    "custom/power",
+    "clock",
+    "group/media"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "custom/battery",
+    "custom/notification"
+  ],
+  "hyprland/window": {
+    "max-length": 50
+  },
+  "network": {
+    "format": "{icon}",
+    "format-wifi": "{icon}   {essid} ",
+    "format-ethernet": "     {ifname}",
+    "format-disconnected": "󰤮", //An empty format will hide the module.
+    "format-disabled": "󰤮",
+    "format-icons": [
+      "󰤟",
+      "󰤢",
+      "󰤨"
+    ],
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "󰖪",
+    "max-length": 50,
+    "on-click": "kitty -- nmtui"
+  },
+  "clock": {
+    "format": "   {:%H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#75f1fa'><b>{}</b></span>"
+      }
+    },
+    "on-click": "exec firefox https://calendar.google.com"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": " ",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "scroll-step": 1,
+    "ignored-sinks": [
+      "Easy Effects Sink"
+    ],
+    "tooltip-format": "{volume}%",
+    "on-click": "~/.config/rofi/applets/bin/volume.sh"
+  },
+  "custom/notification": {
+    "exec": "~/.config/waybar/custom-modules/notification.sh",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": false,
+    "format": "{}",
+    "signal": 9,
+    "on-click": "swaync-client -t"
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "pkill rofi; ~/.config/rofi/applets/bin/powermenu.sh",
+    "tooltip-format": "Arch btw"
+  },
+  "custom/battery": {
+    "exec": "~/.config/waybar/custom-modules/battery.sh",
+    "return-type": "json",
+    "interval": 30,
+    "tooltip": true,
+    "format": "{}",
+    "on-click": "~/.config/rofi/applets/bin/battery.sh"
+  },
+  "custom/music-button": {
+    "format": "{icon}",
+    "return-type": "json",
+    "format-icons": {
+      "Playing": "",
+      "Paused": ""
+    },
+    "max-length": 40,
+    "exec": "~/.config/waybar/custom-modules/media.sh",
+    "on-click": "playerctl -p spotify play-pause",
+    "escape": true,
+    "interval": 1,
+    "tooltip": false
+  },
+  "custom/music": {
+    "format": "{text}",
+    "return-type": "json",
+    "max-length": 40,
+    "exec": "~/.config/waybar/custom-modules/media.sh",
+    "escape": true,
+    "interval": 1
+  },
+  "group/media": {
+    "orientation": "horizontal",
+    "tooltip": false,
+    "modules": [
+      "custom/music-button",
+      "custom/music"
+    ]
+  }
+}
