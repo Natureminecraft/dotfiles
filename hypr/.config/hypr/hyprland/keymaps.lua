@@ -18,7 +18,6 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(webbrowser))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 for _, key in ipairs({ "ALT + SPACE" }) do hl.bind(key, hl.dsp.exec_cmd(menu)) end
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("pkill rofi ; ~/.config/rofi/others/theme-switcher.sh"))
-hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("~/.local/share/custom/persistent.sh"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.exit()'"))

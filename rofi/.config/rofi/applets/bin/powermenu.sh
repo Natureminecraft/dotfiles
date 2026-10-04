@@ -87,7 +87,7 @@ run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
 		hyprlock
 	elif [[ "$1" == '--opt2' ]]; then
-		confirm_run './.local/bin/wm-logout/logout.sh'
+		confirm_run 'pkill hyprland'
 	elif [[ "$1" == '--opt3' ]]; then
 		confirm_run 'systemctl suspend'
 	elif [[ "$1" == '--opt4' ]]; then

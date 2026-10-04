@@ -129,7 +129,7 @@ keymap = [
 	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
 	{ on = [ "g", "d" ],       run = "cd ~/Documents",   desc = "Go ~/Documents" },
   { on = [ "g", "p" ],       run = "cd ~/Pictures",   desc = "Go ~/Pictures " },
-  { on = [ "g", "u" ],       run = "cd /run/media/nature",   desc = "Go USB" },
+  { on = [ "g", "u" ],       run = "cd /run/media/$USER",   desc = "Go USB" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 
