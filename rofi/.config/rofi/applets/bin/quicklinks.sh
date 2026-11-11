@@ -21,12 +21,12 @@ mesg="Using brave as web browser"
 # Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
-	option_1=" Default"
+	option_1="󰖟 Default"
 	option_2=" Gmail"
 	option_3=" Youtube"
 	option_4=" Github"
 	option_5=" Instagram"
-	option_6="󰙯 Discord"
+	option_6="△ Sayodevice"
 else
 	option_1=""
 	option_2=""
@@ -66,7 +66,7 @@ run_cmd() {
 	elif [[ "$1" == '--opt5' ]]; then
 		xdg-open 'https://www.instagram.com/'
 	elif [[ "$1" == '--opt6' ]]; then
-		xdg-open 'https://discord.com/channels/@me'
+		xdg-open 'https://sayodevice.com/'
 	fi
 }
 
